@@ -45,7 +45,7 @@ define('LIMIT_USER_WIDTH',     true);
 // the width for product thumbnail
 define('THUMBNAIL_WIDTH',      180);
 
-if (!get_magic_quotes_gpc()) {
+// if (!get_magic_quotes_gpc()) {
 	if (isset($_POST)) {
 		foreach ($_POST as $key => $value) {
 			$_POST[$key] =  trim(addslashes($value));
@@ -57,7 +57,7 @@ if (!get_magic_quotes_gpc()) {
 			$_GET[$key] = trim(addslashes($value));
 		}
 	}
-}
+// }
 
 require_once 'database.php';
 require_once 'common.php';
